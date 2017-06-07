@@ -43,7 +43,7 @@ class ObjectDefinitionTable extends Component {
                       <code>{definition.get('example')}</code>
                     </small>
                   }
-                  {definition.get('oneOf') && <span><br />One of the following:</span>}
+                  {definition.get('oneOf') && <span><br /><br />One of the following:</span>}
                   {definition.get('anyOf') && <span><br />Any of the following:</span>}
                 </div>
 

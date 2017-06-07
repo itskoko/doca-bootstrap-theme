@@ -31,15 +31,7 @@ class Definition extends Component {
 
     return (
       <div>
-        {IS_JAVASCRIPT &&
-          <a
-            onClick={this.handleToggle}
-            style={{ cursor: 'pointer' }}
-          >
-            <span>{showDefinition ? 'Hide' : 'Show'}</span> definition &raquo;
-          </a>
-        }
-        {(showDefinition || !IS_JAVASCRIPT) && this.renderDefTable(definitions)}
+        {this.renderDefTable(definitions)}
       </div>
     );
   }
