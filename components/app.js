@@ -14,6 +14,7 @@ class App extends Component {
   render() {
     const { schemas, config } = this.props;
     const authentication_example = "curl -X POST 'https://api.koko.ai/track/content' \\ \n     -H 'Authorization: APIKEY' \\ \n     -d '{ \"id\": \"123\", \"created_at\": \"2016-08-29T09:12:33.001Z\", \"user_id\": \"123\", \"type\": \"post\", \"context_id\": \"123\", \"content_type\": \"text\", \"content\": { \"text\": \"Some UGC\" } }'"
+    const error_example = '{ "error" => ["Required property user_id was not present."] }'
 
     return (
       <div id="wrapper">
@@ -48,6 +49,14 @@ class App extends Component {
                   </div>
                   <div className="panel-body">
                     <h4>Koko uses conventional HTTP response codes to indicate the success or failure of an API request. In general, codes in the 2xx range indicate success, codes in the 4xx range indicate an error that failed given the information provided (e.g. content text was omitted), and codes in the 5xx range indicate an error with Koko's servers (these are rare).</h4>
+                    <div>
+                      <div>
+                        <h5>Example</h5>
+                      </div>
+                      <div>
+                        <pre>{error_example}</pre>
+                      </div>
+                    </div>
                   </div>
                 </article>
                 {schemas
