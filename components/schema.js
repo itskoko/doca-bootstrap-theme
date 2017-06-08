@@ -31,44 +31,6 @@ class Schema extends Component {
           <div id={schema.get('html_id')} />
           <h2>{schema.get('title')}</h2>
         </div>
-        <div className="panel-body">
-          <h4>{schema.get('description')}</h4>
-          {schema.get('extended_description') &&
-            <MarkdownPreview value={schema.get('extended_description')} />}
-
-          <header id={`${schema.get('html_id')}-properties`}>
-          </header>
-
-          {
-            <div>
-              {schema.getIn(['object_definition', 'objects']).count() ?
-                <div>
-                  {schema.getIn(['object_definition', 'objects']).valueSeq().map(obj =>
-                    <div key={obj.get('title')}>
-                      {obj.get('title') &&
-                        <div>
-                          <h4>{obj.get('title')}</h4>
-                        </div>
-                      }
-                      {obj.get('example') && <ExampleObject example={obj.get('example')} />}
-                      <ObjectDefinitionTable definitions={obj.get('all_props')} />
-                    </div>
-                  )}
-                </div>
-              :
-                <div>
-                  {schema.getIn(['object_definition', 'example']) &&
-                    <ExampleObject example={schema.getIn(['object_definition', 'example'])} />
-                  }
-
-                  <ObjectDefinitionTable
-                    definitions={schema.getIn(['object_definition', 'all_props'])}
-                  />
-                </div>
-              }
-            </div>
-          }
-        </div>
         <div className="list-group">
           {schema
             .get('links')

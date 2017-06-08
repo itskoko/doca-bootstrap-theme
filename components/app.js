@@ -13,7 +13,7 @@ class App extends Component {
 
   render() {
     const { schemas, config } = this.props;
-    const authentication_example = "curl -X POST 'https://api.koko.ai/track/created' \\ \n     -H 'Authorization: APIKEY' \\ \n     -d '{ \"id\": \"123\", \"created_at\": \"2016-08-29T09:12:33.001Z\", \"user_id\": \"123\", \"type\": \"post\", \"context_id\": \"123\", \"content_type\": \"text\", \"content\": { \"text\": \"Some UGC\" } }'"
+    const authentication_example = "curl -X POST 'https://api.koko.ai/track/content' \\ \n     -H 'Authorization: APIKEY' \\ \n     -d '{ \"id\": \"123\", \"created_at\": \"2016-08-29T09:12:33.001Z\", \"user_id\": \"123\", \"type\": \"post\", \"context_id\": \"123\", \"content_type\": \"text\", \"content\": { \"text\": \"Some UGC\" } }'"
 
     return (
       <div id="wrapper">
