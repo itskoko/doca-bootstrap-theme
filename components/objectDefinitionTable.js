@@ -18,8 +18,8 @@ class ObjectDefinitionTable extends Component {
       <table className="table table-hover">
         <thead>
           <tr>
-            <th><p>Name <small>/type</small></p></th>
-            <th><p>Description <small>/example</small></p></th>
+            <th><p>Name</p></th>
+            <th><p>Description</p></th>
             <th><p>Constraints</p></th>
           </tr>
         </thead>
