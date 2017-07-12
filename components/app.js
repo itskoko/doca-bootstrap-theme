@@ -13,8 +13,8 @@ class App extends Component {
 
   render() {
     const { schemas, config } = this.props;
-    const authentication_example = "curl -X POST 'https://api.koko.ai/track/content' \\ \n     -H 'Authorization: APIKEY' \\ \n     -d '{ \"id\": \"123\", \"created_at\": \"2016-08-29T09:12:33.001Z\", \"user_id\": \"123\", \"type\": \"post\", \"context_id\": \"123\", \"content_type\": \"text\", \"content\": { \"text\": \"Some UGC\" } }'"
-    const error_example = '{ "error" => ["Required property user_id was not present."] }'
+    const authentication_example = "curl -X POST 'https://api.koko.ai/track/content' \\ \n     -H 'Authorization: APIKEY' \\ \n     -d '{}'"
+    const error_example = '{ "error": ["Required property user_id was not present."] }'
 
     return (
       <div id="wrapper">
